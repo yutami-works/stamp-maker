@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタンプ加工</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body onload="init()">
+    <p>スタンプ加工</p>
+    <a href="../index.html">戻る</a>
+    <hr>
+    <input type="file" accept="image/*" onchange="loadImage(this.files)">
+    <input type="color" id="color" value="#CC3333">
+    閾値：<input type="range" id="t" value="4" min="1" max="8">
+    <input type="checkbox" id="edge" checked>輪郭を強調
+    <input type="button" id="make" value="作成" onclick="filter()">
+    <input type="button" value="保存" onclick="saveImage()">
+    <hr>
+    <canvas id="image"></canvas>
+    <canvas id="stamp"></canvas>
+    <script src="./script.js"></script>
+</body>
+</html>
