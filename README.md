@@ -1,5 +1,5 @@
-# JS-room
+# stamp-maker
 
-JavaScriptのお部屋
+画像をスタンプっぽく加工するアプリ
 
 https://yutami-works.github.io/JS-room/

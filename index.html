@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScriptのお部屋</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スタンプ加工</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<body>
-    <h1>JavaScriptのお部屋</h1>
-    <a href="./001_worldClock/worldclock.html">世界時計</a>
-    <a href="./281_image_stamp/image_stamp.html">スタンプ加工</a>
+<body onload="init()">
+  <input type="file" accept="image/*" onchange="loadImage(this.files)">
+  <input type="color" id="color" value="#CC3333">
+  閾値：<input type="range" id="t" value="4" min="1" max="8">
+  <input type="checkbox" id="edge" checked>輪郭を強調
+  <input type="button" id="make" value="作成" onclick="filter()">
+  <input type="button" value="保存" onclick="saveImage()">
+  <hr>
+  <canvas id="image"></canvas>
+  <canvas id="stamp"></canvas>
+  <script src="./script.js"></script>
 </body>
 </html>
